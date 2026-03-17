@@ -2,23 +2,242 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Video Projects | Portfolio</title>
+  <title>REEL — Video Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Video Projects</h1>
-  <p>Selected sports & motion video work</p>
-</header>
+<!-- ─── CURSOR ─── -->
+<div class="cursor" id="cursor"></div>
 
-<main id="gallery">
-  <!-- Projekte werden automatisch aus projects.js geladen -->
-</main>
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <div class="nav-logo">REEL<span class="accent-dot">.</span></div>
+  <ul class="nav-links">
+    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+    <li><a href="#" class="nav-link" data-page="projects">Projects</a></li>
+    <li><a href="#" class="nav-link" data-page="about">About</a></li>
+    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+  </ul>
+  <div class="nav-burger" id="burger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
 
-<footer>
-  <p>© 2026 • Video Portfolio</p>
+<!-- ─── MOBILE MENU ─── -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#" class="mob-link" data-page="home">Home</a></li>
+    <li><a href="#" class="mob-link" data-page="projects">Projects</a></li>
+    <li><a href="#" class="mob-link" data-page="about">About</a></li>
+    <li><a href="#" class="mob-link" data-page="contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════════ -->
+<section class="page active" id="page-home">
+
+  <div class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">Sports · Motion · Editorial</div>
+      <h1 class="hero-title">
+        <span class="line">MOVING</span>
+        <span class="line accent-line">STORIES</span>
+        <span class="line">FORWARD</span>
+      </h1>
+      <p class="hero-sub">Cinematic sports edits that hit hard and stay with you.</p>
+      <div class="hero-cta">
+        <button class="btn-primary" data-page="projects">View Projects</button>
+        <button class="btn-ghost" data-page="contact">Get in Touch</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">40+</span><span class="stat-label">Projects</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">12</span><span class="stat-label">Sports</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">3M+</span><span class="stat-label">Views</span></div>
+    </div>
+  </div>
+
+  <!-- Featured Reel -->
+  <div class="section-featured">
+    <div class="section-label">FEATURED REEL</div>
+    <div class="featured-video-wrap">
+      <video class="featured-video" src="videos/reel.mp4" autoplay muted loop playsinline></video>
+      <div class="featured-overlay">
+        <div class="play-badge">▶&nbsp; SHOWREEL 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Preview -->
+  <div class="section-preview">
+    <div class="preview-header">
+      <h2 class="section-title">LATEST <em>WORK</em></h2>
+      <button class="btn-text" data-page="projects">All Projects →</button>
+    </div>
+    <div class="preview-grid" id="homePreview"></div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="section-ticker">
+    <div class="ticker-inner" id="ticker">
+      <span>SPORTS EDITING</span><span class="tdot">◆</span>
+      <span>COLOR GRADING</span><span class="tdot">◆</span>
+      <span>MOTION GRAPHICS</span><span class="tdot">◆</span>
+      <span>SOUND DESIGN</span><span class="tdot">◆</span>
+      <span>SOCIAL MEDIA CUTS</span><span class="tdot">◆</span>
+      <span>HIGHLIGHT REELS</span><span class="tdot">◆</span>
+      <span>SPORTS EDITING</span><span class="tdot">◆</span>
+      <span>COLOR GRADING</span><span class="tdot">◆</span>
+      <span>MOTION GRAPHICS</span><span class="tdot">◆</span>
+      <span>SOUND DESIGN</span><span class="tdot">◆</span>
+      <span>SOCIAL MEDIA CUTS</span><span class="tdot">◆</span>
+      <span>HIGHLIGHT REELS</span><span class="tdot">◆</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════
+     PAGE: PROJECTS
+══════════════════════════════════════ -->
+<section class="page" id="page-projects">
+  <div class="page-hero-slim">
+    <div class="page-hero-label">PORTFOLIO</div>
+    <h2 class="page-hero-title">ALL <em>PROJECTS</em></h2>
+  </div>
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="social">Social Cuts</button>
+    <button class="filter-btn" data-filter="highlight">Highlights</button>
+    <button class="filter-btn" data-filter="editorial">Editorial</button>
+  </div>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PAGE: ABOUT
+══════════════════════════════════════ -->
+<section class="page" id="page-about">
+  <div class="about-wrap">
+    <div class="about-left">
+      <div class="page-hero-label">ABOUT</div>
+      <h2 class="page-hero-title">THE <em>EDITOR</em></h2>
+      <p class="about-text">
+        I'm a sports videographer and editor obsessed with rhythm, impact, and the perfect cut.
+        Every frame tells a story — I make sure it's the right one.
+      </p>
+      <p class="about-text">
+        From Olympic gymnastics to street football, I specialize in transforming raw footage into
+        cinematic content that moves people — literally and emotionally.
+      </p>
+      <div class="about-skills">
+        <div class="skill-row"><span class="skill-name">Premiere Pro</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div><span class="skill-pct">95%</span></div>
+        <div class="skill-row"><span class="skill-name">After Effects</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div><span class="skill-pct">88%</span></div>
+        <div class="skill-row"><span class="skill-name">DaVinci Resolve</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div><span class="skill-pct">80%</span></div>
+        <div class="skill-row"><span class="skill-name">Camera / Capture</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div><span class="skill-pct">75%</span></div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder"><span>YOUR PHOTO</span></div>
+        <div class="about-img-accent"></div>
+      </div>
+      <div class="about-cards">
+        <div class="about-card"><span class="ac-num">40+</span><span class="ac-label">Projects</span></div>
+        <div class="about-card"><span class="ac-num">12</span><span class="ac-label">Sports</span></div>
+        <div class="about-card"><span class="ac-num">3M+</span><span class="ac-label">Views</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PAGE: CONTACT
+══════════════════════════════════════ -->
+<section class="page" id="page-contact">
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <div class="page-hero-label">CONTACT</div>
+      <h2 class="page-hero-title">LET'S <em>WORK</em></h2>
+      <p class="contact-sub">Have a project? A game? A vision? Let's talk.</p>
+      <div class="contact-links">
+        <a class="contact-item" href="mailto:hello@yourportfolio.com">
+          <span class="ci-icon">✉</span><span>hello@yourportfolio.com</span>
+        </a>
+        <a class="contact-item" href="#">
+          <span class="ci-icon">▶</span><span>@yourinsta</span>
+        </a>
+        <a class="contact-item" href="#">
+          <span class="ci-icon">in</span><span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="contact-form">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Project Type</label>
+          <select>
+            <option>Social Media Cut</option>
+            <option>Highlight Reel</option>
+            <option>Full Event Coverage</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button class="btn-primary full-width">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LIGHTBOX ─── -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-backdrop" id="lbBackdrop"></div>
+  <div class="lb-content">
+    <button class="lb-close" id="lbClose">✕</button>
+    <video class="lb-video" id="lbVideo" controls playsinline></video>
+    <div class="lb-info">
+      <h3 id="lbTitle"></h3>
+      <p id="lbDesc"></p>
+      <span class="lb-tag" id="lbTag"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">REEL<span class="accent-dot">.</span></div>
+    <p class="footer-copy">© 2026 · Sports & Motion Portfolio</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Vimeo</a>
+    </div>
+  </div>
 </footer>
 
 <script src="projects.js"></script>
