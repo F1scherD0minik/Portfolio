@@ -196,6 +196,11 @@ if (imgMain && imgAccent) {
     const temp = imgMain.src;
     imgMain.src = imgAccent.src;
     imgAccent.src = temp;
+   /* z-index auch tauschen */
+    const zMain   = imgMain.style.zIndex || 1;
+    const zAccent = imgAccent.style.zIndex || 2;
+    imgMain.style.zIndex   = zAccent;
+    imgAccent.style.zIndex = zMain;
   });
 }
 });
