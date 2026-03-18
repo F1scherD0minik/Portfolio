@@ -330,6 +330,9 @@ select, input, textarea { font-family: var(--font-body); }
   background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
   pointer-events: none;
 }
+.featured-overlay .btn-primary {
+  pointer-events: all;
+}
 .play-badge {
   font-family: var(--font-cond);
   font-size: 12px;
