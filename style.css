@@ -618,14 +618,12 @@ select, input, textarea { font-family: var(--font-body); }
   border: 2px dashed var(--border);
 }
 .about-img-real {
-   position: relativ;
   width: 100%;
    max-width: 470px;
   aspect-ratio: 3/4;
   object-fit: cover;
   border-radius: 12px;
   display: block;
-   z-index: 2;
 }
 .about-img-placeholder span {
   font-family: var(--font-cond);
