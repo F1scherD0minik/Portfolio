@@ -386,7 +386,7 @@ select, input, textarea { font-family: var(--font-body); }
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border);
-  cursor: none;
+  cursor: pointer;
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 .proj-card:hover {
@@ -759,7 +759,7 @@ select, input, textarea { font-family: var(--font-body); }
   color: var(--muted);
   transition: color 0.2s;
   padding: 8px;
-  cursor: none;
+  cursor: pointer;
 }
 .lb-close:hover { color: var(--accent); }
 .lb-video {
