@@ -187,6 +187,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initFilters();
   bindNavLinks();
   initBurger();
-  initCursor();
   initNavScroll();
 });
