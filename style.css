@@ -617,6 +617,13 @@ select, input, textarea { font-family: var(--font-body); }
   display: flex; align-items: center; justify-content: center;
   border: 2px dashed var(--border);
 }
+.about-img-real {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
 .about-img-placeholder span {
   font-family: var(--font-cond);
   font-size: 14px;
