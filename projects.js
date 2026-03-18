@@ -188,19 +188,4 @@ document.addEventListener("DOMContentLoaded", () => {
   bindNavLinks();
   initBurger();
   initNavScroll();
-   /* Bild-Tausch beim Klick */
-const imgMain   = document.getElementById("imgMain");
-const imgAccent = document.getElementById("imgAccent");
-if (imgMain && imgAccent) {
-  imgAccent.addEventListener("click", () => {
-    const temp = imgMain.src;
-    imgMain.src = imgAccent.src;
-    imgAccent.src = temp;
-   /* z-index auch tauschen */
-    const zMain   = imgMain.style.zIndex || 1;
-    const zAccent = imgAccent.style.zIndex || 2;
-    imgMain.style.zIndex   = zAccent;
-    imgAccent.style.zIndex = zMain;
-  });
-}
 });
