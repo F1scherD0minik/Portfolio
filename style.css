@@ -35,22 +35,6 @@ a { color: inherit; text-decoration: none; }
 button { cursor: none; border: none; background: none; font-family: inherit; }
 select, input, textarea { font-family: var(--font-body); }
 
-/* ── CUSTOM CURSOR ── */
-.cursor {
-  position: fixed;
-  width: 14px; height: 14px;
-  background: var(--accent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s, width 0.3s, height 0.3s, opacity 0.3s;
-  mix-blend-mode: difference;
-}
-body:has(a:hover) .cursor,
-body:has(button:hover) .cursor {
-  width: 36px; height: 36px; opacity: 0.6;
-}
 
 /* ══════════════════════════════════════
    NAV
