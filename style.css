@@ -338,6 +338,13 @@ select, input, textarea { font-family: var(--font-body); }
   object-fit: cover;
   display: block;
 }
+.featured-img-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border: 1px solid var(--border);
+}
 .featured-overlay {
   position: absolute; inset: 0;
   display: flex; align-items: flex-end; justify-content: flex-start;
