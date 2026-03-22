@@ -58,6 +58,16 @@ select, input, textarea { font-family: var(--font-body); }
 }
 .accent-dot { color: var(--accent); }
 
+.logo-big {
+  color: var(--accent);
+  font-family: var(--font-display);
+}
+
+.logo-league {
+  color: var(--text);
+  font-family: var(--font-display);
+}
+
 .nav-links {
   display: flex; gap: 10px; list-style: none;
 }
