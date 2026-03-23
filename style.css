@@ -873,3 +873,119 @@ select, input, textarea { font-family: var(--font-body); }
     max-width: 100%;
   }
 }
+
+/* ══════════════════════════════════════
+   EVENT CARDS
+══════════════════════════════════════ */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 0 60px 60px;
+}
+
+.event-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.event-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(232,255,0,0.25);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+}
+
+.event-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.event-sport {
+  font-family: var(--font-cond);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+.event-status {
+  font-family: var(--font-cond);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(232,255,0,0.3);
+  color: var(--accent);
+  background: rgba(232,255,0,0.06);
+}
+.event-status.confirmed {
+  border-color: rgba(0,255,120,0.3);
+  color: #00ff78;
+  background: rgba(0,255,120,0.06);
+}
+.event-status.closed {
+  border-color: var(--border);
+  color: var(--muted);
+  background: transparent;
+}
+
+.event-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.event-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.event-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: var(--bg3);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.ed-icon {
+  font-size: 14px;
+}
+.ed-label {
+  font-family: var(--font-cond);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.ed-value {
+  font-family: var(--font-cond);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.event-info {
+  font-size: 13px;
+  color: rgba(240,240,240,0.6);
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.event-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+@media (max-width: 700px) {
+  .events-grid { padding: 0 20px 40px; }
+  .event-details { grid-template-columns: 1fr 1fr; }
+}
