@@ -656,7 +656,7 @@ select, input, textarea { font-family: var(--font-body); }
   display: block;
 }
 .about-img-landscape {
-  width: 100%;
+  width: 1300%;
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 12px;
