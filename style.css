@@ -655,6 +655,13 @@ select, input, textarea { font-family: var(--font-body); }
   border-radius: 12px;
   display: block;
 }
+.about-img-landscape {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
 .about-img-placeholder span {
   font-family: var(--font-cond);
   font-size: 14px;
